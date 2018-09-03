@@ -25,10 +25,19 @@ a {
   color: #666;
   text-decoration: none;
 }
+html,
+body {
+  height: 100%;
+}
+body {
+  padding: 45px 0;
+  height: 100%;
+}
 #header {
   width: 100%;
   height: 45px;
   position: fixed;
+  top: 0;
   background-color: #006699;
   z-index: 999;
 }
@@ -48,7 +57,20 @@ a {
   top: 14px;
 }
 #main {
-  padding: 45px 0;
+  /*
+    由于之前main
+    
+    */
+  position: relative;
+  height: 100%;
+}
+#main .mui-scroll-wrapper {
+  /*
+        mui框架中的区域滚动组件（mui-scroll-wrapper）默认为absolute定位，而给父元素main设置了上下padding是影响不了绝对定位的
+        怎么办？？？
+        给body添加padding，让main就只占中间部分的高度，这样就避开了padding的失效
+
+        */
 }
 #footer {
   width: 100%;
@@ -75,7 +97,7 @@ a {
   display: block;
 }
 #main {
-  background-color: #ccc;
+  background-color: #fff;
 }
 #main #nav {
   padding: 10px;
@@ -140,16 +162,16 @@ a {
 #man .content .mui-row > div {
   padding: 0 5px;
 }
-#sport .content .mui-row > div:nth-of-type(n+3),
-#woman .content .mui-row > div:nth-of-type(n+3),
-#man .content .mui-row > div:nth-of-type(n+3) {
+#sport .content .mui-row > div:nth-child(n+3),
+#woman .content .mui-row > div:nth-child(n+3),
+#man .content .mui-row > div:nth-child(n+3) {
   margin-top: 10px;
 }
 #sport .content .mui-row > div .product,
 #woman .content .mui-row > div .product,
 #man .content .mui-row > div .product {
   text-align: center;
-  box-shadow: 0px 0px 1px #ccc;
+  box-shadow: 0px 0px 5px #ccc;
   padding-bottom: 10px;
 }
 #sport .content .mui-row > div .product .product-img img,
@@ -177,4 +199,8 @@ a {
 #man .content .mui-row > div .product .product-buy {
   background-color: #006699;
   border-color: #006699;
+}
+#man .content,
+#woman .content {
+  margin-top: 5px;
 }

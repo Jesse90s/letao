@@ -2,7 +2,7 @@
 @import "base.less";
 // 中间的主体部分样式
 #main {
-    background-color: #ccc; // 导航区域的样式
+    background-color: #fff; // 导航区域的样式
     #nav {
         padding: 10px;
         // box-shadow: 0px 0px 1px #ccc;
@@ -80,21 +80,23 @@
                 // 给栅格添加左右padding（尽量不要给margin）
                 padding: 0 5px;
 
+                // n从0开始，而nth从1开始
                 // &:nth-child(n+2){
                 //     margin-top: 10px;
                 // }
-                // 考虑到伪元素+3 选中第3个以后的div里面的商品添加上间距
-                // &:nth-child(n+3){
-                //     margin-top: 10px;
-                // }
-                &:nth-of-type(n+3){
+
+                // 考虑到有伪元素 +3 即选中第3个及以后的div里面的商品添加上间距
+                &:nth-child(n+3){
                     margin-top: 10px;
                 }
+                // &:nth-of-type(n+3){
+                //     margin-top: 10px;
+                // }
 
                 .product{
                     // 商品盒子就会变小，中间会有间距
                     text-align: center;
-                    box-shadow: 0px 0px 1px #ccc;
+                    box-shadow: 0px 0px 5px #ccc;
                     padding-bottom: 10px;
                     .product-img{
                         img{
@@ -125,5 +127,11 @@
             }
         }
 
+    }
+}
+
+#man, #woman{
+    .content{
+        margin-top: 5px;
     }
 }

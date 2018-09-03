@@ -38,12 +38,14 @@ a {
 }
 
 html,body{
-    // height: 100%;
+    // 给html和body设置高度为100%（因为main的高度为总屏幕的高度 - body的padding-top与padding-bottom）
+    height: 100%;
 }
 
 body{
-    // padding: 45px 0;
-    // height: 100%;
+    // 给body去添加padding，让相对定位的main位于中间
+    padding: 45px 0;
+    height: 100%;
 }
 
 
@@ -53,7 +55,7 @@ body{
     height: 45px;
 
     position: fixed;
-    // top: 0;
+    top: 0;     // 固定定位不能省 
 
     background-color: @mainColor;
 
@@ -82,7 +84,7 @@ body{
 
 // 中间主体区域的公共样式
 #main{
-    padding: 45px 0;    //尽量用padding
+    // padding: 45px 0;    //尽量用padding而不是margin
 
     /*
     由于之前main
@@ -90,16 +92,16 @@ body{
     */
     .mui-scroll-wrapper{
         /*
-        mui框架中mui-scroll-wrapper这个类默认是设置了绝对定位，而父元素main给了padding也影响不了
+        mui框架中的区域滚动组件（mui-scroll-wrapper）默认为absolute定位，而给父元素main设置了上下padding是影响不了绝对定位的
         怎么办？？？
-        给body添加padding，让main只有中间部分的高度
+        给body添加padding，让main就只占中间部分的高度，这样就避开了padding的失效
 
         */
     }
 
     // 给main添加相对定位
-    // position: relative;
-    // height: 100%;
+    position: relative;
+    height: 100%;
     // width: 100%;
 }
 
