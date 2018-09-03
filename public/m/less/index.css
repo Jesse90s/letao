@@ -1,0 +1,180 @@
+/* 样式初始化文件 */
+* {
+  margin: 0px;
+  padding: 0px;
+  /* 移动端一般会设置盒模型为border-box 防止边框和padding撑大盒子超出屏幕宽度出现滚动条 */
+  box-sizing: border-box;
+  /*移动端a标签按住的高亮背景色 设置透明即可*/
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+li {
+  list-style: none;
+}
+input {
+  /* 去除输入框的内外边框 */
+  border: 0;
+  outline: 0;
+}
+img {
+  /* 去掉图片的边框 */
+  border: none;
+  /* 去掉图片底部3px的间距 */
+  vertical-align: middle;
+}
+a {
+  color: #666;
+  text-decoration: none;
+}
+#header {
+  width: 100%;
+  height: 45px;
+  position: fixed;
+  background-color: #006699;
+  z-index: 999;
+}
+#header > h4 {
+  color: #fff;
+  margin: 0;
+  line-height: 45px;
+  font-weight: normal;
+  text-align: center;
+}
+#header > a {
+  color: #fff;
+}
+#header > a.fa-search {
+  position: absolute;
+  right: 20px;
+  top: 14px;
+}
+#main {
+  padding: 45px 0;
+}
+#footer {
+  width: 100%;
+  height: 45px;
+  position: fixed;
+  bottom: 0;
+  background-color: #006699;
+}
+#footer .mui-row > div > a {
+  color: #fff;
+  display: block;
+  font-size: 12px;
+  text-align: center;
+  padding: 6px 0;
+}
+#footer .mui-row > div > a.active {
+  color: darkorange;
+}
+#footer .mui-row > div > a > i {
+  display: block;
+  font-size: 14px;
+}
+#footer .mui-row > div > a > span {
+  display: block;
+}
+#main {
+  background-color: #ccc;
+}
+#main #nav {
+  padding: 10px;
+}
+#main #nav a {
+  display: block;
+}
+#main #nav a img {
+  width: 100%;
+}
+#banner {
+  padding: 0 10px;
+}
+#banner .left a {
+  display: block;
+  float: left;
+}
+#banner .left a img {
+  width: 50%;
+  float: left;
+  height: 120px;
+}
+#banner .right a {
+  display: block;
+}
+#banner .right a img {
+  width: 100%;
+  height: 240px;
+}
+#brand {
+  padding: 10px;
+}
+#brand .title a {
+  display: block;
+}
+#brand .title a img {
+  width: 100%;
+}
+#brand .content a {
+  display: block;
+}
+#brand .content a > img {
+  width: 100%;
+}
+#sport,
+#woman,
+#man {
+  padding: 10px;
+}
+#sport .title a,
+#woman .title a,
+#man .title a {
+  display: block;
+}
+#sport .title a img,
+#woman .title a img,
+#man .title a img {
+  width: 100%;
+}
+#sport .content .mui-row > div,
+#woman .content .mui-row > div,
+#man .content .mui-row > div {
+  padding: 0 5px;
+}
+#sport .content .mui-row > div:nth-of-type(n+3),
+#woman .content .mui-row > div:nth-of-type(n+3),
+#man .content .mui-row > div:nth-of-type(n+3) {
+  margin-top: 10px;
+}
+#sport .content .mui-row > div .product,
+#woman .content .mui-row > div .product,
+#man .content .mui-row > div .product {
+  text-align: center;
+  box-shadow: 0px 0px 1px #ccc;
+  padding-bottom: 10px;
+}
+#sport .content .mui-row > div .product .product-img img,
+#woman .content .mui-row > div .product .product-img img,
+#man .content .mui-row > div .product .product-img img {
+  width: 100%;
+}
+#sport .content .mui-row > div .product .product-price,
+#woman .content .mui-row > div .product .product-price,
+#man .content .mui-row > div .product .product-price {
+  font-size: 12px;
+}
+#sport .content .mui-row > div .product .product-price span,
+#woman .content .mui-row > div .product .product-price span,
+#man .content .mui-row > div .product .product-price span {
+  color: #f40;
+}
+#sport .content .mui-row > div .product .product-price del,
+#woman .content .mui-row > div .product .product-price del,
+#man .content .mui-row > div .product .product-price del {
+  color: #ccc;
+}
+#sport .content .mui-row > div .product .product-buy,
+#woman .content .mui-row > div .product .product-buy,
+#man .content .mui-row > div .product .product-buy {
+  background-color: #006699;
+  border-color: #006699;
+}
