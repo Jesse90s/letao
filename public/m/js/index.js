@@ -1,4 +1,12 @@
-// 入口函数
+/*
+ * @Author: your name
+ * @Date: 2020-12-31 12:20:55
+ * @LastEditTime: 2020-12-31 12:23:07
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \letao\public\m\js\index.js
+ */
+// 入口函数!!!
 $(function(){
 
     var leteo = new Leteo();
